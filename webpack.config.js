@@ -106,6 +106,12 @@ module.exports = (env, argv) => {
       ],
     },
 
+    stats: {
+      loggingDebug: [
+        'sass-loader'
+      ],
+    },
+  
     // enable live reload
     devServer: {
       static: path.resolve(__dirname, 'dist'),

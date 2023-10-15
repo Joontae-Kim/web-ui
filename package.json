@@ -5,7 +5,7 @@
    "repository": "webdiscus/html-bundler-webpack-plugin",
    "license": "ISC",
    "scripts": {
-      "start": "webpack serve --mode development",
+      "dev": "webpack serve --mode development",
       "build": "webpack build --mode production",
       "preview": "npm run build && http-server dist",
       "test": "npm run build"
@@ -30,6 +30,8 @@
       "webpack-manifest-plugin": "^5.0.0"
    },
    "dependencies": {
+      "bootstrap-icons": "^1.11.1",
+      "material-colors": "^1.2.6",
       "normalize.css": "^8.0.1"
    }
 }

@@ -1,0 +1,172 @@
+@import "material-colors/dist/colors.scss";
+
+
+/*
+Tempate for Register Colors Pallete
+
+$s: () !default;
+$s: map-merge(
+  (
+    "-50": ,
+    "-100": ,
+    "-200": ,
+    "-300": ,
+    "-400": ,
+    "-500": ,
+    "-600": ,
+    "-700": ,
+    "-800": ,
+    "-900": ,
+    "-a100": ,
+    "-a200": ,
+    "-a400": ,
+    "-a700": 
+  ),
+  $s
+);
+*/
+
+/*
+ Current Color List
+ 1. reds
+ 2. blues
+ 3. greens
+ 4. yellows
+ 5. browns
+ 6. grays
+ 7. -
+*/
+
+$reds: () !default;
+$reds: map-merge(
+  (
+    "red-50": md-red-50,
+    "red-100": md-red-100,
+    "red-200": md-red-200,
+    "red-300": md-red-300,
+    "red-400": md-red-400,
+    "red-500": md-red-500,
+    "red-600": md-red-600,
+    "red-700": md-red-700,
+    "red-800": md-red-800,
+    "red-900": md-red-900,
+    "red-a100": md-red-a100,
+    "red-a200": md-red-a200,
+    "red-a400": md-red-a400,
+    "red-a700": md-red-a700
+  ),
+  $reds
+);
+
+$blues: () !default;
+$blues: map-merge(
+  (
+    "blue-50": $md-blue-50,
+    "blue-100": $md-blue-100,
+    "blue-200": $md-blue-200,
+    "blue-300": $md-blue-300,
+    "blue-400": $md-blue-400,
+    "blue-500": $md-blue-500,
+    "blue-600": $md-blue-600,
+    "blue-700": $md-blue-700,
+    "blue-800": $md-blue-800,
+    "blue-900": $md-blue-900,
+    "blue-a100": $md-blue-a100,
+    "blue-a200": $md-blue-a200,
+    "blue-a400": $md-blue-a400,
+    "blue-a700": $md-blue-a700
+  ),
+  $blues
+);
+
+$greens: () !default;
+$greens: map-merge(
+  (
+    "green-50": $md-green-50,
+    "green-100": $md-green-100,
+    "green-200": $md-green-200,
+    "green-300": $md-green-300,
+    "green-400": $md-green-400,
+    "green-500": $md-green-500,
+    "green-600": $md-green-600,
+    "green-700": $md-green-700,
+    "green-800": $md-green-800,
+    "green-900": $md-green-900,
+    "green-a100": $md-green-a100,
+    "green-a200": $md-green-a200,
+    "green-a400": $md-green-a400,
+    "green-a700": $md-green-a700
+  ),
+  $greens
+);
+
+$yellows: () !default;
+$yellows: map-merge(
+  (
+    "yellow-50": $md-yellow-50,
+    "yellow-100": $md-yellow-100,
+    "yellow-200": $md-yellow-200,
+    "yellow-300": $md-yellow-300,
+    "yellow-400": $md-yellow-400,
+    "yellow-500": $md-yellow-500,
+    "yellow-600": $md-yellow-600,
+    "yellow-700": $md-yellow-700,
+    "yellow-800": $md-yellow-800,
+    "yellow-900": $md-yellow-900,
+    "yellow-a100": $md-yellow-a100,
+    "yellow-a200": $md-yellow-a200,
+    "yellow-a400": $md-yellow-a400,
+    "yellow-a700": $md-yellow-a700
+  ),
+  $yellows
+);
+
+$browns: () !default;
+$browns: map-merge(
+  (
+    "brown-50": $md-brown-50,
+    "brown-100": $md-brown-100,
+    "brown-200": $md-brown-200,
+    "brown-300": $md-brown-300,
+    "brown-400": $md-brown-400,
+    "brown-500": $md-brown-500,
+    "brown-600": $md-brown-600,
+    "brown-700": $md-brown-700,
+    "brown-800": $md-brown-800,
+    "brown-900": $md-brown-900 
+  ),
+  $browns
+);
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "gray-50": $md-grey-50,
+    "gray-100": $md-grey-100,
+    "gray-200": $md-grey-200,
+    "gray-300": $md-grey-300,
+    "gray-400": $md-grey-400,
+    "gray-500": $md-grey-500,
+    "gray-600": $md-grey-600,
+    "gray-700": $md-grey-700,
+    "gray-800": $md-grey-800,
+    "gray-900": $md-grey-900 
+  ),
+  $grays
+);
+
+$white: $md-white;
+$black: $md-black;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "reds": $reds,
+    "blues": $blues,
+    "greens": $greens,
+    "yellows": $yellows,
+    "browns": $browns,
+    "grays": $grays
+  ),
+  $colors
+);

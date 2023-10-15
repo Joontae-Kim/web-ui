@@ -15,14 +15,23 @@ html {
 
 @import 'normalize.css';
 
+
 @import "functions";
 @import "variables";
+
 
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";
+@import "mixins/background-variant";
+@import "mixins/text-variant";
+
 
 @import "grid";
+@import "utilities/backgrounds";
 @import "utilities/display";
 @import "utilities/flex";
 @import "utilities/spacing";
+@import "utilities/sizing";
+@import "utilities/text";
+

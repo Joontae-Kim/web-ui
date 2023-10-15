@@ -1,0 +1,21 @@
+@each $color-name, $color-list in $colors {
+    // @debug "color-name: #{$color-name}";
+
+    @each $color, $value in $color-list {
+        @include bg-variant(".bg-#{$color}", $value, true);
+    }
+}
+
+// @if $enable-gradients {
+//     @each $color, $value in $theme-colors {
+//         @include bg-gradient-variant(".bg-gradient-#{$color}", $value, true);
+//     }
+// }
+
+.bg-white {
+    background-color: $white !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
