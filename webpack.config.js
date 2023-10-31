@@ -3,6 +3,7 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const TerserPlugin = require('terser-webpack-plugin')
+const templatePath = path.resolve(__dirname, 'src/template');
 
 module.exports = (env, argv) => {
   console.log(` ~ argv.mode => `, argv.mode);
@@ -17,11 +18,12 @@ module.exports = (env, argv) => {
 
     resolve: {
       alias: {
-        '@scripts': path.join(__dirname, 'src/js'),
-        '@styles': path.join(__dirname, 'src/styles'),
-        '@scss': path.join(__dirname, 'src/scss'),
-        '@images': path.join(__dirname, 'src/images'),
-      },
+        '@': path.resolve(__dirname, 'src/'),
+        '@scripts': path.resolve(__dirname, 'src/js'),
+        '@styles': path.resolve(__dirname, 'src/styles'),
+        '@scss': path.resolve(__dirname, 'src/scss'),
+        '@images': path.resolve(__dirname, 'src/images')
+      }
     },
 
     plugins: [
@@ -65,10 +67,14 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: [
-                '@babel/preset-env'
+              // presets: [
+              //   '@babel/preset-env'
+              // ],
+              presets: [['@babel/preset-env', {useBuiltIns: "usage", corejs: 3}]],
+              plugins: [
+                ["@babel/plugin-transform-runtime",{corejs: 3}],
+                '@babel/plugin-syntax-dynamic-import'
               ],
-              plugins: ['@babel/plugin-syntax-dynamic-import'],
             }
           }
         },
@@ -103,6 +109,18 @@ module.exports = (env, argv) => {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           loader: 'file-loader',
         },
+        // {
+        //   test: /\.html$/,
+        //   use: [
+        //     {
+        //       loader: 'html-loader',
+        //       options: {
+        //         minimize: true,
+        //         interpolation: false
+        //       }
+        //     }
+        //   ]
+        // }
       ],
     },
 
